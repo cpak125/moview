@@ -24,12 +24,8 @@ body > nav {
 }
 
 nav > img {
-  width: 34px;
+  width: 40px;
   object-fit: contain;
-  margin-right: auto;
-}
-
-nav > p {
   margin-right: auto;
 }
 
@@ -47,7 +43,8 @@ body > main h1:first-child {
   margin-bottom: 50px;
 }
 
-nav > a {
+nav > a,
+nav > p {
   margin: 20px;
   text-decoration: none;
   padding: 10px;
@@ -89,4 +86,103 @@ nav > a.active {
 
 #new-form input[type="submit"] {
   width: 10rem;
+}
+
+.movies-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-card {
+  width: 70vw;
+  padding: 2vmin;
+  margin: 2vmax;
+  border: .75vmin solid #424748;
+  border-radius: 6vmin;
+  display: grid;
+  grid-template-columns: 32vmin auto;
+  column-gap: 2vmin;
+  grid-template-rows: auto;
+  grid-template-areas: "poster title"
+    "poster release"
+    "poster overview"
+    "poster add";
+}
+
+.movie-card {
+  width: 70vw;
+  padding: 2vmin;
+  margin: 2vmax;
+  border: .75vmin solid #424748;
+  border-radius: 6vmin;
+  display: grid;
+  grid-template-columns: 32vmin auto;
+  column-gap: 2vmin;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "poster title"
+    "poster release"
+    "poster genres"
+    "poster cast"
+    "poster overview"
+    "poster details";
+}
+
+.poster {
+  grid-area: poster;
+  border-radius: 4vmin;
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  grid-area: title;
+  align-self: center;
+}
+
+.overview {
+  grid-area: overview;
+  align-self: center;
+}
+
+.cast {
+  grid-area: cast;
+  align-self: center;
+}
+
+.genres {
+  grid-area: genres;
+  align-self: center;
+}
+
+.release {
+  grid-area: release;
+  align-self: center;
+}
+
+.details {
+  grid-area: details;
+  margin-left: auto;
+  margin-top: auto
+}
+
+.add {
+  grid-area: add;
+  margin-left: auto;
+  margin-top: auto
+}
+
+#add,
+.details > button {
+  padding: 1.5vmin;
+  border-radius: 2vmin;
+  font-size: 16px;
+}
+
+#add:hover,
+.details > button:hover {
+  color: white;
+  background-color: #424748;
 }

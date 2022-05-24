@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+<div class="movies-cont">
+  <% movies.forEach(function (movie) { 
+    let dateSplit = movie.info.release_date.split("-");
+    let newDate = `${dateSplit[1]}/${dateSplit[2]}/${dateSplit[0]}`
+  %>
+  <div class="movie-card">
+    <% if(movie.info.poster_path === null) { %>
+    <img class="poster" src="https://i.imgur.com/VCMGiHY.png">
+    <% } else { %>
+    <img class="poster" src="https://image.tmdb.org/t/p/w200<%= movie.info.poster_path %>">
+    <% } %>
+    <div class="title"> <strong>Title: </strong> <%= movie.info.title %> </div>
+    <div class="release"><strong>Release Date: </strong><%= newDate %></div>
+    <div class="genres"><strong>Genre(s): </strong><%= movie.genres.join(', ') %></div>
+    <div class="cast"><strong>Cast: </strong><%= movie.cast.join(', ') %></div>
+    <div class="overview"><strong>Overview: </strong> <%= movie.info.overview %> </div>
+    <a class="details" href="/movies/<%= movie._id %>"><button>DETAILS</button></a>
+  </div>
+  <% }) %>
+</div>
+
+<%- include('../partials/footer') %>

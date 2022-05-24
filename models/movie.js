@@ -19,7 +19,7 @@ const reviewSchema = new Schema({
 const movieSchema = new Schema({
   info: Schema.Types.Mixed,
   cast: [String],
-  likedBy: [{type: Schema.Types.ObjectId, ref: 'User'}],
+  genres: [String],
   reviews: [reviewSchema]
 }, {
   timestamps: true
