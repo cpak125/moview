@@ -18,12 +18,25 @@ body > nav {
   grid-area: nav;
   background-color: #B8C0C2;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px 0 30px;
 }
 
-nav > img {
+nav > #app-logo {
+  width: 30vmin;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav > #links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#app-logo > img {
   width: 40px;
   object-fit: contain;
   margin-right: auto;
@@ -40,23 +53,23 @@ body > main {
 }
 
 body > main h1:first-child {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
-nav > a,
-nav > p {
+#links > a,
+#links > p {
   margin: 20px;
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
 }
 
-nav > a:hover:not(.active) {
+#links > a:hover:not(.active) {
   color: white;
   background-color: #424748;
 }
 
-nav > a.active {
+#links > a.active {
   color: white;
   cursor: default;
 }
@@ -124,16 +137,32 @@ nav > a.active {
   grid-template-areas:
     "poster title"
     "poster release"
-    "poster genres"
-    "poster cast"
     "poster overview"
     "poster details";
+}
+
+.show-movie {
+  width: 70vw;
+  padding: 2vmin;
+  margin: 2vmax;
+  border: .75vmin solid #424748;
+  border-radius: 6vmin;
+  display: grid;
+  grid-template-columns: 40vmin auto;
+  column-gap: 2vmin;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "poster title"
+    "poster release"
+    "poster genres"
+    "poster cast"
+    "poster overview";
 }
 
 .poster {
   grid-area: poster;
   border-radius: 4vmin;
-  width: 100%;
+  width: 85%;
   height: auto;
 }
 

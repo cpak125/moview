@@ -12,8 +12,8 @@
     <% } %>
     <div class="title"> <strong>Title: </strong> <%= movie.info.title %> </div>
     <div class="release"><strong>Release Date: </strong><%= newDate %></div>
-    <div class="genres"><strong>Genre(s): </strong><%= movie.genres.join(', ') %></div>
-    <div class="cast"><strong>Cast: </strong><%= movie.cast.join(', ') %></div>
+    <!-- <div class="genres"><strong>Genre(s): </strong><%= movie.genres.join(', ') %></div>
+    <div class="cast"><strong>Cast: </strong><%= movie.cast.join(', ') %></div> -->
     <div class="overview"><strong>Overview: </strong> <%= movie.info.overview %> </div>
     <a class="details" href="/movies/<%= movie._id %>"><button>DETAILS</button></a>
   </div>

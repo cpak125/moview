@@ -11,18 +11,23 @@
 
 <body>
   <nav>
-
-    <img src="/images/clapper.svg">
-    <% if (user) { %>
-    <p>Welcome, <%= user.name %> </p>
-    <% } %>
-    <a href="/movies" <%- title === 'All Movies' ? 'class="active"' : '' %>>ALL MOVIES</a>
-    <% if (user) { %>
-    <a href="/movies/new" <%- title === 'Add Movie' ? 'class="active"' : '' %>>ADD MOVIE</a>
-    <a href="/logout">LOG OUT</a>
-    <% } else { %>
-    <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-    <% } %>
+    <div id="app-logo">
+      <img src="/images/clapper.svg">
+      <p><strong>MOVIEW</strong></p>
+    </div>
+    <div id="links">
+      <% if (user) { %>
+      <p>Welcome, <%= user.name %> </p>
+      <% } %>
+      <a href="/movies" <%- title === 'All Movies' ? 'class="active"' : '' %>>ALL MOVIES</a>
+      <% if (user) { %>
+      <a href="/movies/new" <%- title === 'Add Movie' ? 'class="active"' : '' %>>ADD MOVIE</a>
+      <a href="/logout">LOG OUT</a>
+      <% } else { %>
+      <a href="/auth/google" class="login">LOG IN&nbsp;<img
+          src="https://i.imgur.com/FHjYyi0.png"></a>
+      <% } %>
+    </div>
   </nav>
   <main>
     <h1><%= title %></h1>

@@ -17,7 +17,7 @@ router.post('/', moviesCtrl.create);
 router.get('/search', moviesCtrl.search);
 
 // GET /movies/:id (show functionality - show single movie)
-// router.get('/:id', moviesCtrl.show);
+router.get('/:id', moviesCtrl.show);
 
 
 

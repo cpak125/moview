@@ -9,7 +9,8 @@ const castURl =
     new: newMovie,
     create,
     search,
-    index
+    index,
+    show
   };
 
 function index(req, res) {
@@ -19,6 +20,12 @@ function index(req, res) {
     .catch(function(err) {
       res.redirect('/movies');
     });
+}
+
+function show(req, res) {
+  Movie.findById(req.params.id).exec(function(err, movie) {
+    res.render('movies/show', {title: 'Movie Details', movie});
+  });
 }
 
 function newMovie(req, res) {
