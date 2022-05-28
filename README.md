@@ -8,7 +8,7 @@ particular review is the only one authorized to edit and/or delete it.
 
 ## Screenshots
 
-<img src="https://i.imgur.com/aqoFpJF.png" width ="400" /><img src="https://i.imgur.com/r4u57LV.png" width ="400" />
+<img src="https://i.imgur.com/aqoFpJF.png" width ="400" />                  <img src="https://i.imgur.com/r4u57LV.png" width ="400" />
 
 ## Technologies Used
   - HTML 
