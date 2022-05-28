@@ -24,7 +24,7 @@ body > nav {
 }
 
 nav > #app-logo {
-  width: 30vmin;
+  width: 17vmin;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -52,7 +52,7 @@ body > main {
   overflow-y: scroll;
 }
 
-body > main h1:first-child {
+body > main h1 {
   margin-bottom: 20px;
 }
 
@@ -207,11 +207,102 @@ body > main h1:first-child {
 .details > button {
   padding: 1.5vmin;
   border-radius: 2vmin;
-  font-size: 16px;
 }
 
 #add:hover,
 .details > button:hover {
   color: white;
   background-color: #424748;
+}
+
+#add-review-cont {
+  width: 40vw;
+  padding: 2vmin;
+  border: .75vmin solid #424748;
+  border-radius: 4vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#add-review-form {
+  display: grid;
+  grid-template-columns: 10vmin 55vmin;
+  grid-template-rows: 10vmin auto;
+  column-gap: 2vmin;
+  row-gap: 2vmin;
+  grid-template-areas:
+    ". content "
+    ". rating"
+    ". submit";
+}
+
+#content {
+  grid-area: content;
+  font-size: 16px;
+}
+
+#rating {
+  grid-area: rating;
+  width: 10vmin;
+}
+
+#submit {
+  grid-area: submit;
+  width: 15vmin;
+  justify-self: center;
+  padding: 1vmin;
+  border-radius: 1vmin;
+  font-size: 14px;
+}
+
+.review-user {
+  width: 12vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-user img {
+  border-radius: 50%;
+  height: 40px;
+}
+
+#reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.review {
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.review-user {
+  margin-right: 0.5rem;
+}
+
+.review-content {
+  width: 60vmin;
+}
+
+.review-date {
+  margin-left: 4rem;
+}
+
+.edit-delete-review {
+  display: flex;
+  width: 17vmin;
+  justify-content: space-between;
+}
+
+#avg-rating {
+  text-align: right;
+  margin-right: 14rem;
 }

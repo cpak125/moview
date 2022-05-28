@@ -16,4 +16,55 @@
   <div class="overview"><strong>Overview: </strong> <%= movie.info.overview %> </div>
 </section>
 
+<h1>Reviews</h1>
+
+<% if (movie.reviews.length) { %>
+<section id="reviews">
+  <% let total = 0 %>
+  <% movie.reviews.forEach(function(r) { %>
+  <% total += r.rating %>
+  <div class="review">
+    <div class="review-user"><img alt="avatar" src="<%= r.userAvatar %>"><%= r.userName %></div>
+    <div class="review-content"><%= r.content %></div>
+    <div class="review-rating"><%= r.rating %> / 5</div>
+    <div class="review-date"><%= r.createdAt.toLocaleDateString() %></div>
+    <% if(user && user._id.equals(r.user)) { %>
+    <div class="edit-delete-review">
+      <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+        <button type="submit">EDIT</button>
+      </form>
+      <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+        <button type="submit">DELETE</button>
+      </form>
+    </div>
+    <% } %>
+  </div>
+  <% }) %>
+  <div id="avg-rating"><strong>Avg. rating:
+    </strong><%= (total / movie.reviews.length).toFixed(1) %> / 5</div>
+</section>
+<% } else { %>
+<h3>No Reviews Yet</h3>
+<% } %>
+
+<% if (user) { %>
+<section id="add-review-cont">
+  <h2>Add Review</h2>
+  <form id="add-review-form" method="POST" action="/movies/<%= movie._id %>/reviews">
+    <label>Review:</label>
+    <textarea id="content" name="content" required></textarea>
+
+    <label>Rating:</label>
+    <select id="rating" name="rating">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5" selected>5</option>
+    </select>
+    <input id="submit" type="submit" value="SUBMIT">
+  </form>
+</section>
+<% } %>
+
 <%- include('../partials/footer') %>
