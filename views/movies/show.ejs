@@ -30,9 +30,7 @@
     <div class="review-date"><%= r.createdAt.toLocaleDateString() %></div>
     <% if(user && user._id.equals(r.user)) { %>
     <div class="edit-delete-review">
-      <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
-        <button type="submit">EDIT</button>
-      </form>
+      <button type="submit">EDIT</button>
       <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
         <button type="submit">DELETE</button>
       </form>

@@ -6,6 +6,7 @@ const reviewsCtrl = require('../controllers/reviews');
 router.post('/movies/:id/reviews', reviewsCtrl.create);
 
 // DELETE /reviews/:id (delete review that corresponds to logged in user)
+router.delete('/reviews/:id', reviewsCtrl.delete);
 
 // EDIT /review/:id (edit review that corresponds to logged in user)
 

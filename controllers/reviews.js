@@ -2,7 +2,7 @@ const Movie = require('../models/movie');
 
 module.exports = {
   create,
-  // delete: deleteReview,
+  delete: deleteReview,
   // edit
 };
 
@@ -16,4 +16,16 @@ function create(req, res) {
       res.redirect(`/movies/${movie._id}`);
     });
   });
+}
+
+function deleteReview(req, res) {
+  Movie.findOne({'reviews._id': req.params.id, 'reviews.user': req.user._id})
+    .then(function(movie) {
+      if (!movie) return res.redirect('/movies');
+      movie.reviews.remove(req.params.id);
+      return movie.save();
+    })
+    .then(function(movie) {
+      res.redirect(`/movies/${movie._id}`);
+    });
 }
