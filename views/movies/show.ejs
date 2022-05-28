@@ -30,7 +30,7 @@
     <div class="review-date"><%= r.createdAt.toLocaleDateString() %></div>
     <% if(user && user._id.equals(r.user)) { %>
     <div class="edit-delete-review">
-      <button type="submit">EDIT</button>
+      <a href="/reviews/<%= r._id %>/edit"><button type="submit">EDIT</button></a>
       <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
         <button type="submit">DELETE</button>
       </form>
@@ -48,7 +48,7 @@
 <% if (user) { %>
 <section id="add-review-cont">
   <h2>Add Review</h2>
-  <form id="add-review-form" method="POST" action="/movies/<%= movie._id %>/reviews">
+  <form class="add-review-form" method="POST" action="/movies/<%= movie._id %>/reviews">
     <label>Review:</label>
     <textarea id="content" name="content" required></textarea>
 

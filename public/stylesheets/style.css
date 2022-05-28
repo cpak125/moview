@@ -225,7 +225,7 @@ body > main h1 {
   align-items: center;
 }
 
-#add-review-form {
+.add-review-form {
   display: grid;
   grid-template-columns: 10vmin 55vmin;
   grid-template-rows: 10vmin auto;
