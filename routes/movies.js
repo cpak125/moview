@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const moviesCtrl = require('../controllers/movies');
+const isLoggedIn = require('../config/auth');
 
 /* All routes start with '/movies' */
 
@@ -8,10 +9,10 @@ const moviesCtrl = require('../controllers/movies');
 router.get('/', moviesCtrl.index);
 
 // GET /movies/new  (new functionality - render 'new' form)
-router.get('/new', moviesCtrl.new);
+router.get('/new', isLoggedIn, moviesCtrl.new);
 
 // POST /movies/  (create functionality - create new movie)
-router.post('/', moviesCtrl.create);
+router.post('/', isLoggedIn, moviesCtrl.create);
 
 // GET /movies/search  (search functionality - render 'search' results)
 router.get('/search', moviesCtrl.search);
