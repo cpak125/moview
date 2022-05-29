@@ -15,7 +15,7 @@ router.get('/new', isLoggedIn, moviesCtrl.new);
 router.post('/', isLoggedIn, moviesCtrl.create);
 
 // GET /movies/search  (search functionality - render 'search' results)
-router.get('/search', moviesCtrl.search);
+router.get('/search', isLoggedIn, moviesCtrl.search);
 
 // GET /movies/:id (show functionality - show single movie)
 router.get('/:id', moviesCtrl.show);
