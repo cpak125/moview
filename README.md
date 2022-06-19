@@ -7,9 +7,9 @@ All users (logged in or not) are able to see a list of all the movies recommende
 ## Screenshots of App
 
 <img src="https://i.imgur.com/aqoFpJF.png" />  
-<img src="https://i.imgur.com/r4u57LV.png" width="800" />
-<img src="https://i.imgur.com/5b6PKjd.png" width="800" />  
-<img src="https://i.imgur.com/bK3S9rk.png" width="800" />
+<img src="https://i.imgur.com/r4u57LV.png" />
+<img src="https://i.imgur.com/5b6PKjd.png" />  
+<img src="https://i.imgur.com/bK3S9rk.png" />
 
 ## Technologies Used
   - HTML 
