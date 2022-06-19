@@ -23,7 +23,7 @@ All users (logged in or not) are able to see a list of all the movies recommende
   - The Movie Database (TMDB) API
 
 ## Getting Started
-- [Trello Board] (https://trello.com/b/mIenoNgr/moview)
+- [Trello Board](https://trello.com/b/mIenoNgr/moview)
 - [Deployed App](https://moview-app-cp.herokuapp.com/)
 - Start by logging in via Google to access additional functionality
 - Once logged in you will be able:
