@@ -1,8 +1,9 @@
 # Moview
 
-[Moview](https://moview-app-cp.herokuapp.com/) is a MEN-stack CRUD application where users can search for movies to recommend and post reviews for movies. 
+A MEN-stack CRUD application where users can search for movies to recommend and post reviews for movies. 
 All users (logged in or not) are able to see a list of all the movies recommended by all the users as well as it's details, including its reviews. Only logged in users are authorized to add a movie to the "recommendation" list and post reviews for movies. Furthermore, the user who posted a particular review is the only one authorized to edit and/or delete it.
 
+[Deployed App](https://moview-app-cp.herokuapp.com/) 
 
 ## Screenshots of App
 
